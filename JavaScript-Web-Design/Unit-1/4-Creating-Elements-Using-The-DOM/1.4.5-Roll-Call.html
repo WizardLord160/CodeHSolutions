@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<div id = "class-window">
+		    <h2> Student Class List</h2>
+		    <ul id = "class-list">
+		        <li>Karel the Dog</li>
+		        <li>Tracy the Turtle</li>
+		        <li>Jeremy the Human</li>
+		    </ul>
+		</div>
+		<script>
+		    //Append your name at the end of the roll call list
+		    
+		    // Creating li element with text, then defining element to append to
+		    var studentName = document.createElement("li");
+            studentName.innerHTML = "Dylan";
+		    var classList = document.getElementById("class-list");
+		    classList.appendChild(studentName);
+		   
+		    // Creating h4 element with text, then defining element to insert before
+		    var subTitle = document.createElement("h4");
+		    subTitle.innerHTML = ("CodeHS Class");
+            var classWindow = document.getElementById("class-window");
+            classWindow.insertBefore(subTitle, classList);
+
+		    // Insert "Class CodeHS" before the list!
+		</script>
+	</body>
+</html>

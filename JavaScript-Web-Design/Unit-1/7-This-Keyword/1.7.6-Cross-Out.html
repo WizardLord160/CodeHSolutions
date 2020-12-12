@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h3>To Do List:</h3>
+		<ul>
+		    <li>Homework</li>
+		    <li>Walk Karel</li>
+		    <li>Make Dinner</li>
+		    <li>Clean Room</li>
+		</ul>
+		<script>
+		    // Give each li item an event listener
+		    var choreList = document.getElementsByTagName("li");
+		    
+		    for (var i = 0; i < choreList.length; i++)
+		    {
+		        choreList[i].addEventListener("click", crossOff);
+		    }
+		    
+		    // Write function crossOff here.
+		    
+            // If doesn't have text-decoration attribute, strike through
+            // If it does, remove text-decoration attribute
+		    function crossOff() {
+		        if (!this.getAttribute('style', "text-decoration")) {
+		            this.style.textDecoration = "line-through";
+		        } else {
+		            this.removeAttribute("style", "text-decoration");
+		        }
+		    }
+		</script>
+	</body>
+</html>

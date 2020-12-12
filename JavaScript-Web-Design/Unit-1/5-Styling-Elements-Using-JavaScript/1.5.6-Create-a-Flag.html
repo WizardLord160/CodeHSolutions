@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create a Flag</title>
+		<style>
+		    html, body{
+		        display: flex;
+		        flex-direction: column;
+		        align-items: stretch;
+		        height: 100%;
+		    }
+		    div{
+		        flex: 1;
+		    }
+		</style>
+	</head>
+
+	<body>
+		<div id = "color-one">
+		    
+		</div>
+		<div id ="color-two">
+		    
+		</div>
+		<div id = "color-three">
+		</div>
+		<script>
+		    //Add your code here!
+
+            // Get the three divs
+		    rec1 = document.getElementById("color-one");
+		    rec2 = document.getElementById("color-two");
+		    rec3 = document.getElementById("color-three");
+		    
+            // Create three prompts to store the three colors the user chooses
+		    var firstColor = prompt("Pick your first color for your flag:");
+		    var secondColor = prompt("Now the second:");
+		    var thirdColor = prompt("Now the third:");
+		    
+            // Set each div to one of the inputted colors
+            rec1.setAttribute("style", "background-color:" + firstColor);
+            rec2.setAttribute("style", "background-color:" + secondColor);
+            rec3.setAttribute("style", "background-color:" + thirdColor);
+		    
+		</script>
+	</body>
+</html>

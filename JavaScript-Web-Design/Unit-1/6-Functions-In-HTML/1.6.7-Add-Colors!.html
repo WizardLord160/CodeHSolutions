@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		   html,body{
+		        display:flex;
+		        flex-direction: column;
+		        height:100%;
+		    }
+		    div{
+		        flex:1;
+		        text-align: center;
+		    }
+		</style>
+	</head>
+
+	<body>
+		<div>
+		    <button onclick="addColor()">Click Me to Add a Color!</button>
+		</div>
+		<script>
+		    //Write your code here!
+		    var colorBody = document.createElement("div");
+
+            // Function asks for color, sets background to input
+		    function addColor() {
+		        const color = prompt("Enter a color:");
+		        colorBody.style.backgroundColor = color;
+		        document.body.appendChild(colorBody);
+		    }
+		</script>
+	</body>
+</html>

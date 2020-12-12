@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+		    //Write your announcement function here
+		    function announcement(printMessage) {
+                // Create h2 element
+		        var message = document.createElement("h2");
+                // Set function input to h2 element
+		        message.innerHTML = printMessage;
+                // Add h2 element to body
+		        document.body.appendChild(message);
+		    }
+		    
+		    announcement("Merry ");
+		    announcement("Christmas!");
+		</script>
+	</body>
+</html>

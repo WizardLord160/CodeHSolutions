@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<style>
+    	    #textbox{
+                    margin: 10px;
+                    border: 1px solid black;
+                    height: 200px;
+                }
+            #keyboard{
+                    text-align: center;
+                }
+        </style>
+	</head>
+    <body>
+        <div id = 'keyboard'>
+        </div>
+        
+        <div id = 'textbox'>
+        </div>
+    </body>
+    
+    <script>
+        var alpha = ['q','w','e','r','t','y','u','i','o','p','a','s',
+            'd','f','g','h','j','k','l',';','\'',
+            'z','x','c','v','b','n','m', ',','.', 'Space'];
+            
+        // Copy makeButton and makeText functions from previous exercise
+        
+        // Function creates a button with event listener
+        // Takes string input to set as button text
+        function makeButton(string) {
+            const button = document.createElement("button");
+            button.innerHTML = string;
+            button.addEventListener("click", makeText);
+            document.getElementById("keyboard").appendChild(button);
+        }
+    
+        // Create the makeText function
+        
+        // Grab text and add to textbox
+        // If spacebar, add actual space instead of the word "space"
+        const textBox = document.getElementById("textbox");
+        function makeText() {
+            grabText = this.innerHTML;
+            if (grabText === "Space") {
+                textBox.appendChild(document.createTextNode(" "));
+            } else {
+                textBox.appendChild(document.createTextNode(grabText));
+            }
+        }
+        
+        // Create makeKeyboard function
+        // If on certain characters, also makes a line break
+        // Uses makeButton function to create each button and append to document
+        
+        // Loops through alphabet 
+        function makeKeyboard() {
+            for (i = 0; i < alpha.length; i++) {
+                if (alpha[i] === "p" || alpha[i] === ";" || alpha[i] === ".") {
+                    lineBreak = document.createElement("br");
+                    makeButton(alpha[i]);
+                    document.getElementById("keyboard").appendChild(lineBreak);
+                } else {
+                    makeButton(alpha[i]);
+                }
+            }
+        }
+        makeKeyboard();
+    </script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html,body{
+                display: flex;
+                align-items:center;
+                justify-content: center;
+                height:100%;
+            }
+            div{
+                border: solid 1px black;
+                height:50px;
+                width:50px;
+                margin: 5px;
+            }
+        </style>
+    </head>
+	<body>
+		<div></div>
+		<div></div>
+
+		<script>
+		    // Write your function changeColor 
+		    
+            // Get div tags, loop through them and give event listener
+		    var divList = document.getElementsByTagName("div");
+		    for(var i = 0; i < divList.length; i++)
+		    {
+		        divList[i].addEventListener("click", changeColor);
+		    }
+		    
+            // Set div background color to input upon click
+            function changeColor() {
+                var color = prompt("Enter a color.");
+                this.style.backgroundColor = color;
+            }
+		</script>
+	</body>
+</html>

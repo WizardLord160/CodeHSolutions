@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<body>
+	    <h2>Tonight's Menu</h2>
+		<ol>
+		    <li>Caesar Salad</li>
+		    <li>French Onion Soup</li>
+		    <li>Mac N Cheese</li>
+		    <li>Pork Chops with Spinach</li>
+		    <li>Cheesecake</li>
+		</ol>
+		<script>
+            // Put the list into a variable for future access
+		    var list = document.getElementsByTagName("li");
+
+            // Select favorite and least favorite foods from the list with indexing and display with string concatenation
+            alert(list[4].innerHTML + " is my favorite.");
+            alert(list[3].innerHTML + " is my least favorite."); 
+		</script>
+	</body>
+</html>

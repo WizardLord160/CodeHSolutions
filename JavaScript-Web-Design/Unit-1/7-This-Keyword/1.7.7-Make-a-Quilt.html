@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		    html,body{
+		        display:flex;
+		        flex-wrap: wrap;
+		        height:100%;
+		        width:100%;
+		        padding-left:2%;
+		        padding-right:2%;
+		    }
+		    div{
+		        height:10%;
+		        width:9%;
+		        border: 1px solid black;
+		    }
+		</style>
+	</head>
+	<body>
+		<script>
+		    // Add 100 divs to the canvas
+		    for (var i = 0; i < 100; i++) {
+		        var quiltBoxes = document.cresssssssssssssssssssssssateElement("div");
+		        document.body.appendChild(quiltBoxes);
+		    }
+		    
+            // Give an event listener to each div upon mouse hover
+		    var divList = document.getElementsByTagName("div");
+		    for(var i = 0; i < divList.length; i++) {
+		        divList[i].addEventListener("mouseover", paint);
+		    }
+		    
+		    // Write function paint 
+		    
+            // Generate a random number, assign each number a color
+            // Set the background color of each div to color
+		    function paint() {
+		        var generatedNum = Math.floor(Math.random() * 4) + 1 
+		        var color = "";
+		        if (generatedNum === 1) {
+		            color = "red"; 
+		        } else if (generatedNum === 2) {
+		            color = "blue";
+		        } else if (generatedNum === 3) {
+		            color = "purple";
+		        } else {
+		            color = "orange";
+		        }
+		        this.style.backgroundColor = color;
+		    }
+		</script>
+	</body>
+</html>

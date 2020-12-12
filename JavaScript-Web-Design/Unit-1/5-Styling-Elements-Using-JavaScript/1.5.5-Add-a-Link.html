@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<p id = "web-page">
+		    Check out my website
+		    
+		</p>
+		<script>
+		    // Add your code here:
+		    var paragraph = document.getElementById("web-page");
+		    
+            // Create the link and its text here
+		    var hyperLink = document.createElement("a");
+		    hyperLink.innerHTML = "here!";
+		    hyperLink.setAttribute("href", "https://www.codehs.com/sandbox");
+		    
+            // Add link to paragraph
+		    paragraph.appendChild(hyperLink);
+		    
+		</script>
+	</body>
+</html>
